@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-// import withDataFetching from '../withDataFetching';
 import SubHeader from '../components/Header/SubHeader';
 
 const ListWrapper = styled.div`
@@ -28,30 +27,17 @@ const Title = styled.h3`
   flex-basis: 80%;
 `;
 
-// const Alert = styled.span`
-//   width: 100%;
-//   text-align: center;
-// `;
-
-// const Lists = ({ data, loading, error, history }) =>
 const Lists = ({ lists, loading = false, error = false, match, history }) => (
-  // !loading && !error ? (
-    <>
-      {history && <SubHeader title='Your Lists' openForm={() => history.push('/new')} />}
-      <ListWrapper>
-        {lists && lists.map(list => (
-            <ListLink key={list.id} to={`list/${list.id}`}>
-              <Title>{list.title}</Title>
-            </ListLink>
-          ))}
-      </ListWrapper>
-    </>
-  );
+  <>
+    {history && <SubHeader title='Your Lists' openForm={() => history.push('/new')} />}
+    <ListWrapper>
+      {lists && lists.map(list => (
+        <ListLink key={list.id} to={`list/${list.id}`}>
+          <Title>{list.title}</Title>
+        </ListLink>
+      ))}
+    </ListWrapper>
+  </>
+);
 
 export default Lists;
-
-// export default withDataFetching({
-//   dataSource:
-//     'https://my-json-server.typicode.com/durrantm/shoppingList/lists',
-//     // 'https://my-json-server.typicode.com/PacktPublishing/React-Projects/lists',
-// })(Lists);

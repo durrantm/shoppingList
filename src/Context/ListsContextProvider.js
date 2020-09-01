@@ -1,6 +1,5 @@
 import React from 'react';
 import withDataFetching from '../withDataFetching';
-
 export const ListsContext = React.createContext();
 
 const ListsContextProvider = ({ children, data }) => (
