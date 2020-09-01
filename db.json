@@ -1,7 +1,7 @@
 {
   "items": [
     { "id": 1, "listId": 1, "title": "Peas", "quantity": 1, "price": 6.99 },
-    { "id": 2, "listId": 1, "title": "Rice", "quantity": 1, "price": 0.99 }
+    { "id": 2, "listId": 1, "title": "Rice", "quantity": 1, "price": 0.99 },
     { "id": 3, "listId": 2, "title": "Soap", "quantity": 1, "price": 6.99 },
     { "id": 4, "listId": 2, "title": "Towels", "quantity": 1, "price": 0.99 }
   ],
